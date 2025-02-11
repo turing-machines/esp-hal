@@ -294,11 +294,6 @@ pub unsafe extern "C" fn esp_fill_random(dst: *mut u8, len: u32) {
     }
 }
 
-#[no_mangle]
-pub unsafe extern "C" fn strrchr(_s: *const (), _c: u32) -> *const u8 {
-    todo!("strrchr");
-}
-
 // this will result in a duplicate symbol error once `floor` is available
 // ideally we would use weak linkage but that is not stabilized
 // see https://github.com/esp-rs/esp-wifi/pull/191
